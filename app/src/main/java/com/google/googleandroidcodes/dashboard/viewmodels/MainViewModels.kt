@@ -21,4 +21,8 @@ class MainViewModels @Inject constructor(
         return mainRepository.getNews()
     }
 
+    override fun onCleared() {
+        super.onCleared()
+        mainRepository.clear()
+    }
 }
